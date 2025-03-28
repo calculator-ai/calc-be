@@ -26,7 +26,7 @@ def analyze_image(img: Image, dict_of_vars: dict):
         response = model.generate_content([prompt, img])
         response_text = response.text.strip()
 
-        print("🔹 Gemini Raw Response:", response_text)
+        # print("🔹 Gemini Raw Response:", response_text)
 
         # ✅ **Fix Gemini’s Response Formatting**
         response_text = response_text.replace("'", '"')  # Fix single to double quotes
